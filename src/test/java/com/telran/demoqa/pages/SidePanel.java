@@ -2,6 +2,7 @@ package com.telran.demoqa.pages;
 
 import com.telran.demoqa.pages.bookStorePages.BookStorePage;
 import com.telran.demoqa.pages.bookStorePages.ProfilePage;
+import com.telran.demoqa.tests.AutoCompleteTests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -110,5 +111,45 @@ public class SidePanel extends PageBase {
     public PracticeFormPage selectPracticeForm() {
         clickWithJSExecutor(selectPracticeForm,0,200);
         return new PracticeFormPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Menu']")
+    WebElement selectMenuTab;
+
+    public MenuPage selectMenuPage() {
+        clickWithJSExecutor(selectMenuTab,0,500);
+        return new MenuPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Slider']")
+    WebElement selectSlider;
+
+    public SliderPage selectSlider() {
+        clickWithJSExecutor(selectSlider,0,500);
+        return new SliderPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Text Box']")
+    WebElement selectTextBox;
+
+    public TextBoxPage selectTextBox() {
+        clickWithJSExecutor(selectTextBox,0,100);
+        return new TextBoxPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Upload and Download']")
+    WebElement selectUploadAndDownload;
+
+    public UploadAndDownloadPage selectUploadAndDownload() {
+        clickWithJSExecutor(selectUploadAndDownload,0,500);
+        return new UploadAndDownloadPage(driver);
+    }
+
+    @FindBy (xpath = "//span[.='Auto Complete']")
+    WebElement selectAutoComplete;
+
+    public AutoCompletePage selectAutoComplete() {
+        clickWithJSExecutor(selectAutoComplete, 0, 300);
+        return  new AutoCompletePage(driver);
     }
 }
