@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Tests1" verbose="1" >
+    <test name="Tests1" >
+        <classes>
+            <class name="com.telran.demoqa.tests.bookStoreTests.LoginPageTests">
+                <parameter name="name" value="irhan"/>
+                <parameter name="password" value="Qazwsx123!"/>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -6,6 +6,7 @@ import com.telran.demoqa.pages.HomePage;
 import com.telran.demoqa.pages.bookStorePages.LoginPage;
 import com.telran.demoqa.tests.TestBase;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginPageTests extends TestBase {
@@ -20,8 +21,18 @@ public class LoginPageTests extends TestBase {
     @Test
     public void loginPositiveTest() {
         new LoginPage(driver).login(UserData.USER_NAME,UserData.USER_PASSWORD)
-                .verifyUserName("neuer").logout();
+                .verifyUserName("irhan").logout();
     }
+
+    @Test
+    @Parameters({"name","password"})
+    public void loginPositiveParametersTest(String name, String password) {
+        new LoginPage(driver).login(name,password)
+                .verifyUserName("neuer")
+                .logout();
+    }
+
+
     @Test
     public void loginPositiveWithAssertTest() {
 
@@ -30,5 +41,7 @@ public class LoginPageTests extends TestBase {
                 .isAccountAssert("irhan")
                 .logout();
     }
+
+
 
 }

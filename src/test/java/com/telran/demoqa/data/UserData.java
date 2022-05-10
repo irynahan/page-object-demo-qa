@@ -4,4 +4,5 @@ public class UserData {
 
     public static final String USER_NAME = "irhan";
     public static final String USER_PASSWORD = "Qazwsx123!";
+    public static final String EMAIL = "irhan@gmail.com";
 }
